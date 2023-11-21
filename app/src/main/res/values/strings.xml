@@ -1,0 +1,18 @@
+<resources>
+    <string name="welcome_to_dating_app">Welcome to Dating App</string>
+    <string name="created_by_monu">Created by Monu</string>
+    <string name="spalshphoto">spalshphoto</string>
+    <string name="enter_your_number">enter your number</string>
+    <string name="number">number</string>
+    <string name="app_name">MyDatingApp</string>
+    <string name="phonenumber">PhoneNumber</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="imagefordata">imagefordata</string>
+    <string name="enter_otp">enter otp</string>
+    <string name="send_otp">Send Otp</string>
+    <string name="enterotp">Enter Otp</string>
+    <string name="verify_otp">verify otp</string>
+    <string name="resister_activity">Resister Activity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
