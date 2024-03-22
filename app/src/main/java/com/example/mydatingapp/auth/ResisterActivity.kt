@@ -74,6 +74,7 @@ class ResisterActivity : AppCompatActivity() {
         storageRef.putFile(imageUri!!).addOnSuccessListener {
             storageRef.downloadUrl.addOnSuccessListener {
                 storeData(it)
+                hideDialog()
             }.addOnFailureListener {
                 hideDialog()
                 FancyToast.makeText(
@@ -115,6 +116,7 @@ class ResisterActivity : AppCompatActivity() {
 
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()
+                    hideDialog()
 
                     FancyToast.makeText(
                         this,
