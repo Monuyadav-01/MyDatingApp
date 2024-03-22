@@ -3,23 +3,16 @@ package com.example.mydatingapp.auth
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mydatingapp.MainActivity
-import com.example.mydatingapp.R
 import com.example.mydatingapp.databinding.ActivityResisterBinding
 import com.example.mydatingapp.model.UserModel
 import com.example.mydatingapp.utils.Config
 import com.example.mydatingapp.utils.Config.hideDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ktx.database
-import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.FirebaseStorageKtxRegistrar
-import com.google.firebase.storage.UploadTask
-import com.google.firebase.storage.ktx.storage
 import com.shashank.sony.fancytoastlib.FancyToast
 
 class ResisterActivity : AppCompatActivity() {
@@ -43,6 +36,7 @@ class ResisterActivity : AppCompatActivity() {
 
         binding.saveData.setOnClickListener {
             validateData()
+
         }
     }
 
@@ -120,6 +114,7 @@ class ResisterActivity : AppCompatActivity() {
                 if (it.isSuccessful) {
 
                     startActivity(Intent(this, MainActivity::class.java))
+                    finish()
 
                     FancyToast.makeText(
                         this,

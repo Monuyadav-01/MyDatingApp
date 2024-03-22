@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/app_nav">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/datingFragment">
 
+    <fragment
+        android:id="@+id/datingFragment"
+        android:name="com.example.mydatingapp.ui.DatingFragment"
+        android:label="fragment_dating"
+        tools:layout="@layout/fragment_dating" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.mydatingapp.ui.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="com.example.mydatingapp.ui.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" />
 </navigation>
