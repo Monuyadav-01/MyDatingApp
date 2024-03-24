@@ -157,7 +157,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun checkUserExist(number: String) {
-        FirebaseDatabase.getInstance().getReference("users").child(number).addValueEventListener(object :
+        FirebaseDatabase.getInstance().getReference("users").child(number).addListenerForSingleValueEvent(object :
             ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 alertDialog.dismiss()

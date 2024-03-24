@@ -36,7 +36,6 @@ class ResisterActivity : AppCompatActivity() {
 
         binding.saveData.setOnClickListener {
             validateData()
-
         }
     }
 
@@ -74,7 +73,7 @@ class ResisterActivity : AppCompatActivity() {
         storageRef.putFile(imageUri!!).addOnSuccessListener {
             storageRef.downloadUrl.addOnSuccessListener {
                 storeData(it)
-                hideDialog()
+
             }.addOnFailureListener {
                 hideDialog()
                 FancyToast.makeText(
@@ -101,23 +100,19 @@ class ResisterActivity : AppCompatActivity() {
     private fun storeData(imageUrl: Uri?) {
 
         val data = UserModel(
-
             name = binding.userName.text.toString(),
             image = imageUrl.toString(),
             email = binding.userEmail.text.toString(),
             city = binding.userCity.text.toString(),
-
-            )
+        )
 
         FirebaseDatabase.getInstance().getReference("users")
             .child(FirebaseAuth.getInstance().currentUser!!.phoneNumber!!).setValue(data)
             .addOnCompleteListener {
                 if (it.isSuccessful) {
-
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()
                     hideDialog()
-
                     FancyToast.makeText(
                         this,
                         "User register successfully",
@@ -127,7 +122,6 @@ class ResisterActivity : AppCompatActivity() {
                     ).show()
 
                 } else {
-
                     FancyToast.makeText(
                         this,
                         "Some Thing went wrong",
@@ -135,10 +129,7 @@ class ResisterActivity : AppCompatActivity() {
                         FancyToast.ERROR,
                         true
                     ).show()
-
                 }
             }
-
     }
-
 }

@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="30dp"
-                android:text="Let's Konw You"
+                android:text="Let's Know You"
                 android:textColor="@color/white"
                 android:textSize="22sp"
                 android:textStyle="bold" />
@@ -85,8 +85,8 @@
                         android:id="@+id/userName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawablePadding="16dp"
                         android:drawableStart="@drawable/nameicon"
+                        android:drawablePadding="16dp"
                         android:hint="Name"
                         android:inputType="text" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -101,8 +101,8 @@
                         android:id="@+id/userEmail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawablePadding="16dp"
                         android:drawableStart="@drawable/mail"
+                        android:drawablePadding="16dp"
                         android:hint="Email Id"
                         android:inputType="textEmailAddress" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -117,25 +117,27 @@
                         android:id="@+id/userCity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawablePadding="16dp"
                         android:drawableStart="@drawable/gps"
+                        android:drawablePadding="16dp"
                         android:hint="City"
                         android:inputType="text" />
                 </com.google.android.material.textfield.TextInputLayout>
+
                 <CheckBox
 
                     android:id="@+id/termsConditions"
                     android:layout_width="wrap_content"
-                    android:text="Accept Term and conditions"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:text="Accept Term and conditions" />
+
                 <Button
                     android:id="@+id/saveData"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Continue"
+                    android:backgroundTint="#910303"
                     android:elevation="20dp"
-                    android:backgroundTint="#910303" />
+                    android:text="Continue" />
             </LinearLayout>
 
 
