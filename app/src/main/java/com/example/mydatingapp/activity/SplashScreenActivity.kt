@@ -6,9 +6,8 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mydatingapp.MainActivity
-import com.example.mydatingapp.auth.LoginActivity
 import com.example.mydatingapp.R
-import com.example.mydatingapp.auth.ResisterActivity
+import com.example.mydatingapp.auth.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -22,10 +21,9 @@ class SplashScreenActivity : AppCompatActivity() {
 
 
             {
-                if(user == null){
+                if (user == null) {
                     startActivity(Intent(this, LoginActivity::class.java))
-                }
-                else{
+                } else {
                     startActivity(Intent(this, MainActivity::class.java))
                 }
                 finish()
